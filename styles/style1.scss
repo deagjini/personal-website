@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+//colors 
+$serenity: #B3CEE5; 
+$rose_quartz: #F7CACA;  
+$purple_mix: #D2C4D6;
+
+::selection{
+    background: $purple_mix;
+    color: white; 
+}
+
+body{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+//Link 
+a{
+    text-decoration: none;
+    &:hover{
+        color:$purple_mix; 
+    }
+}
+
+//Header 
+header{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    //padding-left: 5%; 
+    //padding-right: 5%;
+    //padding: 0 clamp(1rem, 10%, 500px);
+    //padding: 0rem 3.5rem; 
+    //width: 90%; 
+    margin: auto; 
+    //min-height: 10vh; 
+    h1{
+        a{
+            font-family: UnifrakturCook, cursive;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 7rem;
+        
+            color: $rose_quartz; 
+        }
+    } 
+    ul{
+        display: flex; 
+        list-style: none; 
+        li{
+            padding: 0rem 1.25rem;  
+            &:not(:last-child){
+                border-right: 0.25rem solid $serenity;
+            }
+
+            a{ 
+                font-family: SansSerif;
+                font-style: italic;
+                font-weight: bold;
+                font-size: 1.7rem; 
+
+                color: $serenity; 
+            }
+        }
+    }
+}
+
+.intro{
+    h2{
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 3rem;
+    } 
+    p{
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.75rem;
+    }
+    #about_intro{
+        font-size: 1rem; 
+    }
+} 
+
+.fun-cursor{
+    padding-top: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    h3{
+        //font-family: SansSerif;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 1.75rem;
+        color: darkgray;
+        .roseq{
+            color: $rose_quartz; 
+        }
+        .bserenity{
+            color: $serenity; 
+        }
+    }
+    p{ 
+        font-size: 1rem;
+        cursor: url("https://img.icons8.com/cotton/64/000000/like--v1.png"), default;
+    }
+    
+}
+
+.ab_pg{
+    h3{
+        font-family: SansSerif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2rem;
+    
+        color: $serenity;
+    }
+    
+    p{
+        font-family: 'Open Sans', sans-serif; 
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5rem;
+        a{
+            color: $rose_quartz; 
+            font-weight: bold;
+            &:hover{
+                color:$purple_mix; 
+            }
+        }
+        span{
+            font-size: 1rem; 
+        }
+    }
+    div{
+        width: 0.4rem;
+        height: 2rem;
+        background: $serenity; 
+    }
+    padding-bottom: 2rem;
+    
+}
+
+#bottom-div{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    color: $serenity; 
+    h3{
+        font-family: SansSerif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    p{
+        font-size: 5em;
+    }
+    h3, p{
+        margin: 0.75rem;
+    }
+    padding-bottom: 5rem;
+}
+
+.about_main{
+    display: flex; 
+    margin: auto; 
+    #first-section{
+        padding-right: 7rem;
+        h2{
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 3rem;
+
+        }
+        p{
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1rem;
+        }
+
+        @media screen and (max-width: 1024px) {
+            padding-right: 0rem;
+        }
+    }
+
+    #second-section{
+
+        .photo-section{
+            display: flex;
+            align-content: center; 
+            position: relative; 
+            #profile-pic{
+                width: 25rem;
+                height: 25rem;
+                padding-right: 3rem;
+                position: absolute;
+            }
+            
+            #big-rect{
+                margin-top: 2rem;
+                margin-left: 2rem;
+                width: 25rem; 
+                height: 25rem; 
+                background: $rose_quartz;
+                //display: inline-block; 
+                //position: absolute;
+            } 
+            
+        }
+
+        #rec2{
+            width: 27rem;
+            height: 3rem;
+            background-color: $rose_quartz;
+
+            #connect{
+                padding-top: 0.25rem;
+                padding-left: 1rem;
+                font-family: SansSerif;
+                font-style: italic;
+                font-weight: bold;
+                font-size: 2rem;
+    
+                color: #FFFFFF;
+            }
+
+        }
+
+        .links-connect{
+            display: flex; 
+            align-content: center; 
+            position: relative;
+            #rec4{
+                width: 25rem;
+                height: 10.5rem;
+                background-color: $rose_quartz;
+                position: absolute;
+                ul{
+                    display: flex;
+                    list-style: none;
+                    padding: 0px;
+                    flex-direction: column;
+                    li{
+                        margin-top: 0.5rem; 
+                        margin-bottom: 0.5rem;
+                        padding-left: 1rem;
+                        a{
+                            font-family: SansSerif;
+                            font-style: italic;
+                            font-weight: bold;
+                            font-size: 1.5rem;
+                            text-decoration: none;
+                            &:hover{
+                                color:$purple_mix; 
+                            }
+    
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            #background-links{
+                margin-top: 2rem; 
+                margin-left: 2rem; 
+                width: 25rem; 
+                height: 10.5rem; 
+                background: $serenity;
+            }
+        }
+
+
+        #rec2, #rec4{
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .interests{
+        margin-bottom: 5rem;
+        h3{
+            font-family: SansSerif;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 1.75rem;
+    
+            color: $serenity;
+    
+        }
+        
+        ul{
+            display: flex;
+            list-style: none;
+            padding: 0px;
+            li{
+                margin-right: 4.5rem;
+                a{
+                    font-family: SansSerif;
+                    font-style: italic;
+                    font-weight: bold;
+                    font-size: 18px;
+                    text-decoration: none;
+                    &:hover{
+                        color:$purple_mix; 
+                    }
+                    color: black;
+                    img{
+                        width: 10rem;
+                        height: 10rem;
+                    }
+                }
+            }
+        }
+    
+        #book{
+            width: 8rem; 
+            height: 11.25rem; 
+        }
+    }
+    
+
+    @media screen and (max-width: 1024px){
+        flex-direction: column; 
+        align-items: center; 
+        justify-content: center;
+        margin-bottom: 5rem;
+    }
+}
