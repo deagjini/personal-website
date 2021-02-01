@@ -93,7 +93,7 @@ header{
         font-style: italic;
         font-weight: bold;
         font-size: 1.75rem;
-        color: darkgray;
+        color: black;
         .roseq{
             color: $rose_quartz; 
         }
@@ -301,7 +301,7 @@ header{
                     font-family: SansSerif;
                     font-style: italic;
                     font-weight: bold;
-                    font-size: 18px;
+                    //font-size: 18px;
                     text-decoration: none;
                     &:hover{
                         color:$purple_mix; 
@@ -312,6 +312,13 @@ header{
                         height: 10rem;
                     }
                 }
+            }
+
+            @media screen and (max-width: 1024px){
+                flex-direction: column; 
+                align-items: center; 
+                justify-content: center;
+                //margin-bottom: 5rem;
             }
         }
     

@@ -93,7 +93,7 @@ header ul li a {
   font-style: italic;
   font-weight: bold;
   font-size: 1.75rem;
-  color: darkgray;
+  color: black;
 }
 
 .fun-cursor h3 .roseq {
@@ -335,7 +335,6 @@ header ul li a {
   font-family: SansSerif;
   font-style: italic;
   font-weight: bold;
-  font-size: 18px;
   text-decoration: none;
   color: black;
 }
@@ -347,6 +346,21 @@ header ul li a {
 .about_main .interests ul li a img {
   width: 10rem;
   height: 10rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .about_main .interests ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .about_main .interests #book {
