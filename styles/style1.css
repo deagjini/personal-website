@@ -43,27 +43,126 @@ header h1 a {
   color: #F7CACA;
 }
 
-header ul {
+header .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
 
-header ul li {
+header .nav-links li {
   padding: 0rem 1.25rem;
 }
 
-header ul li:not(:last-child) {
+header .nav-links li:not(:last-child) {
   border-right: 0.25rem solid #B3CEE5;
 }
 
-header ul li a {
+header .nav-links li a {
   font-family: SansSerif;
   font-style: italic;
   font-weight: bold;
   font-size: 1.7rem;
   color: #B3CEE5;
+}
+
+header .burger {
+  display: none;
+}
+
+header .burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #B3CEE5;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  header body {
+    overflow-x: hidden;
+  }
+  header .nav-links {
+    position: fixed;
+    right: 0px;
+    height: 100%;
+    top: 8vh;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: right;
+        -ms-flex-align: right;
+            align-items: right;
+    width: 50%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+  header .nav-links li {
+    opacity: 0;
+    padding: 3rem;
+  }
+  header .nav-links li:not(:last-child) {
+    border-right: 0;
+  }
+  header .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+header .nav-active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+header .toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+header .toggle .line2 {
+  opacity: 0;
+}
+
+header .toggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .intro h2 {
