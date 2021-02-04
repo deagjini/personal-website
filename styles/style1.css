@@ -59,11 +59,16 @@ header .nav-links li:not(:last-child) {
 }
 
 header .nav-links li a {
-  font-family: SansSerif;
+  font-family: SansSerif, "Open Sans", sans-serif;
   font-style: italic;
   font-weight: bold;
   font-size: 1.7rem;
   color: #B3CEE5;
+  text-decoration: none;
+}
+
+header .nav-links li a:hover {
+  color: #D2C4D6;
 }
 
 header .burger {
@@ -170,14 +175,14 @@ header .toggle .line3 {
 }
 
 .intro h2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 3rem;
 }
 
 .intro p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.75rem;
@@ -189,7 +194,7 @@ header .toggle .line3 {
 
 .fun-cursor {
   padding-top: 2rem;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .fun-cursor h3 {
@@ -217,7 +222,7 @@ header .toggle .line3 {
 }
 
 .ab_pg h3 {
-  font-family: SansSerif;
+  font-family: SansSerif, "Open Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 2rem;
@@ -225,7 +230,7 @@ header .toggle .line3 {
 }
 
 .ab_pg p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1.5rem;
@@ -266,7 +271,7 @@ header .toggle .line3 {
 }
 
 #bottom-div h3 {
-  font-family: SansSerif;
+  font-family: SansSerif, "Open Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 2rem;
@@ -292,14 +297,14 @@ header .toggle .line3 {
 }
 
 .about_main #first-section h2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 3rem;
 }
 
 .about_main #first-section p {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 1rem;
@@ -308,6 +313,12 @@ header .toggle .line3 {
 @media screen and (max-width: 1024px) {
   .about_main #first-section {
     padding-right: 0rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about_main #first-section #about-me, .about_main #first-section .interests {
+    margin-bottom: 0rem;
   }
 }
 
@@ -344,7 +355,7 @@ header .toggle .line3 {
 .about_main #second-section #rec2 #connect {
   padding-top: 0.25rem;
   padding-left: 1rem;
-  font-family: SansSerif;
+  font-family: SansSerif, "Open Sans", sans-serif;
   font-style: italic;
   font-weight: bold;
   font-size: 2rem;
@@ -386,7 +397,7 @@ header .toggle .line3 {
 }
 
 .about_main #second-section .links-connect #rec4 ul li a {
-  font-family: SansSerif;
+  font-family: SansSerif, "Open Sans", sans-serif;
   font-style: italic;
   font-weight: bold;
   font-size: 1.5rem;
@@ -422,7 +433,7 @@ header .toggle .line3 {
 }
 
 .about_main .interests h3 {
-  font-family: SansSerif;
+  font-family: SansSerif, "Open Sans", sans-serif;
   font-style: italic;
   font-weight: bold;
   font-size: 1.75rem;
@@ -442,7 +453,7 @@ header .toggle .line3 {
 }
 
 .about_main .interests ul li a {
-  font-family: SansSerif;
+  font-family: SansSerif, "Open Sans", sans-serif;
   font-style: italic;
   font-weight: bold;
   text-decoration: none;
@@ -490,7 +501,6 @@ header .toggle .line3 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 5rem;
   }
 }
 /*# sourceMappingURL=style1.css.map */

@@ -6,6 +6,10 @@ $serenity: #B3CEE5;
 $rose_quartz: #F7CACA;  
 $purple_mix: #D2C4D6;
 
+//fonts 
+$open-sans: 'Open Sans', sans-serif; 
+
+
 ::selection{
     background: $purple_mix;
     color: white; 
@@ -57,12 +61,17 @@ header{
             }
 
             a{ 
-                font-family: SansSerif;
+                font-family: SansSerif, $open-sans;
                 font-style: italic;
                 font-weight: bold;
                 font-size: 1.7rem; 
 
                 color: $serenity; 
+
+                text-decoration: none;
+                &:hover{
+                    color:$purple_mix; 
+                }
             }
         }
     }
@@ -149,13 +158,13 @@ header{
 
 .intro{
     h2{
-        font-family: 'Open Sans', sans-serif;
+        font-family: $open-sans;
         font-style: normal;
         font-weight: bold;
         font-size: 3rem;
     } 
     p{
-        font-family: 'Open Sans', sans-serif;
+        font-family: $open-sans;
         font-style: normal;
         font-weight: normal;
         font-size: 1.75rem;
@@ -167,7 +176,7 @@ header{
 
 .fun-cursor{
     padding-top: 2rem;
-    font-family: 'Open Sans', sans-serif;
+    font-family: $open-sans;
     h3{
         //font-family: SansSerif;
         font-style: italic;
@@ -190,7 +199,7 @@ header{
 
 .ab_pg{
     h3{
-        font-family: SansSerif;
+        font-family: SansSerif, $open-sans;
         font-style: normal;
         font-weight: bold;
         font-size: 2rem;
@@ -199,7 +208,7 @@ header{
     }
     
     p{
-        font-family: 'Open Sans', sans-serif; 
+        font-family: $open-sans; 
         font-style: normal;
         font-weight: normal;
         font-size: 1.5rem;
@@ -229,7 +238,7 @@ header{
     align-items: center;
     color: $serenity; 
     h3{
-        font-family: SansSerif;
+        font-family: SansSerif, $open-sans;
         font-style: normal;
         font-weight: bold;
         font-size: 2rem;
@@ -249,14 +258,14 @@ header{
     #first-section{
         padding-right: 7rem;
         h2{
-            font-family: 'Open Sans', sans-serif;
+            font-family: $open-sans;
             font-style: normal;
             font-weight: bold;
             font-size: 3rem;
 
         }
         p{
-            font-family: 'Open Sans', sans-serif;
+            font-family: $open-sans;
             font-style: normal;
             font-weight: normal;
             font-size: 1rem;
@@ -264,6 +273,12 @@ header{
 
         @media screen and (max-width: 1024px) {
             padding-right: 0rem;
+        }
+
+        #about-me, .interests{
+            @media screen and (max-width: 1024px) {
+                margin-bottom: 0rem;
+            }
         }
     }
 
@@ -300,7 +315,7 @@ header{
             #connect{
                 padding-top: 0.25rem;
                 padding-left: 1rem;
-                font-family: SansSerif;
+                font-family: SansSerif, $open-sans;
                 font-style: italic;
                 font-weight: bold;
                 font-size: 2rem;
@@ -329,7 +344,7 @@ header{
                         margin-bottom: 0.5rem;
                         padding-left: 1rem;
                         a{
-                            font-family: SansSerif;
+                            font-family: SansSerif, $open-sans;
                             font-style: italic;
                             font-weight: bold;
                             font-size: 1.5rem;
@@ -370,7 +385,7 @@ header{
     .interests{
         margin-bottom: 5rem;
         h3{
-            font-family: SansSerif;
+            font-family: SansSerif, $open-sans;
             font-style: italic;
             font-weight: bold;
             font-size: 1.75rem;
@@ -386,7 +401,7 @@ header{
             li{
                 margin-right: 4.5rem;
                 a{
-                    font-family: SansSerif;
+                    font-family: SansSerif, $open-sans;
                     font-style: italic;
                     font-weight: bold;
                     //font-size: 18px;
@@ -421,6 +436,6 @@ header{
         flex-direction: column; 
         align-items: center; 
         justify-content: center;
-        margin-bottom: 5rem;
+        //margin-bottom: 5rem;
     }
 }
