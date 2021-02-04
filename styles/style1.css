@@ -275,6 +275,7 @@ header .toggle .line3 {
   font-style: normal;
   font-weight: bold;
   font-size: 2rem;
+  text-align: center;
 }
 
 #bottom-div p {
