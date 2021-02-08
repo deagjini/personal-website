@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-//colors 
+//first color trio 
 $serenity: #B3CEE5; 
 $rose_quartz: #F7CACA;  
 $purple_mix: #D2C4D6;
+
+//second color trio 
+$illum-yellow: #F5DF4D; 
+$ultimate-grey: #939597; 
+$light-grey: #d3d3d3; 
 
 //fonts 
 $open-sans: 'Open Sans', sans-serif; 
@@ -13,6 +18,11 @@ $open-sans: 'Open Sans', sans-serif;
 ::selection{
     background: $purple_mix;
     color: white; 
+}
+
+.dark ::selection{
+    background: $light-grey; 
+    color: white;
 }
 
 body{
@@ -28,24 +38,58 @@ a{
     }
 }
 
+.dark a{
+    &:hover{
+        color: $light-grey; 
+    }
+}
+
+@mixin linkChange ($one, $hover){
+    //background-color: $one;
+    color: $one; 
+    &:hover{
+        color: $hover; 
+        cursor: pointer;
+    }
+}
+
+@mixin colorChange($mainColor) {
+    color: $mainColor; 
+}
+
+.change-color{
+    font-family: SansSerif, $open-sans;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1rem; 
+    border: none;
+    outline: none;
+    background: none;
+    margin-bottom: 5rem;
+    
+    @include linkChange($rose_quartz, $purple_mix)
+}
+
+.dark .change-color{
+
+    @include linkChange($ultimate-grey, $light-grey)
+}
+
+
 //Header 
 header{
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    //padding-left: 5%; 
-    //padding-right: 5%;
-    //padding: 0 clamp(1rem, 10%, 500px);
-    //padding: 0rem 3.5rem; 
-    //width: 90%; 
     margin: auto; 
-    //min-height: 10vh; 
+
     h1{
         a{
             font-family: UnifrakturCook, cursive;
             font-style: normal;
             font-weight: bold;
             font-size: 7rem;
+            transition: all 0.3s ease;
         
             color: $rose_quartz; 
         }
@@ -55,6 +99,7 @@ header{
         display: flex; 
         list-style: none; 
         li{
+            transition: all 0.3s ease;
             padding: 0rem 1.25rem;  
             &:not(:last-child){
                 border-right: 0.25rem solid $serenity;
@@ -65,6 +110,7 @@ header{
                 font-style: italic;
                 font-weight: bold;
                 font-size: 1.7rem; 
+                transition: all 0.3s ease;
 
                 color: $serenity; 
 
@@ -156,6 +202,44 @@ header{
 
 }
 
+.dark header{
+    h1{
+        a{
+            color: $illum-yellow; 
+        }
+    }
+
+    .nav-links{
+        li{
+            &:not(:last-child){
+                border-right: 0.25rem solid $ultimate-grey;
+            }
+            a{
+                color: $ultimate-grey; 
+                &:hover{
+                    color: $light-grey;
+                }
+            }
+        }
+    }
+
+    .burger{
+        div{
+            background-color: $ultimate-grey;
+        }
+    }
+
+    @media screen and (max-width: 768px) {   
+        .nav-links {
+            li{
+                &:not(:last-child){
+                    border-right: 0;
+                }
+            }
+        }
+    }
+}
+
 .intro{
     h2{
         font-family: $open-sans;
@@ -177,24 +261,52 @@ header{
 .fun-cursor{
     padding-top: 2rem;
     font-family: $open-sans;
-    h3{
-        //font-family: SansSerif;
+
+    #color-titles{
+
         font-style: italic;
         font-weight: bold;
         font-size: 1.75rem;
         color: black;
-        .roseq{
-            color: $rose_quartz; 
+        p, span{
+            display: inline; 
         }
-        .bserenity{
-            color: $serenity; 
+        #color1{
+            @include colorChange($rose_quartz); 
+            //color: $rose_quartz; 
+        }
+        #color2{
+            @include colorChange($serenity); 
+            //color: $serenity; 
         }
     }
-    p{ 
-        font-size: 1rem;
-        cursor: url("https://img.icons8.com/cotton/64/000000/like--v1.png"), default;
+
+    a{
+        color: black;
+        &:hover{
+            color: $purple_mix;
+        }
+        p{ 
+            font-size: 1rem;
+            cursor: url("https://img.icons8.com/cotton/64/000000/like--v1.png"), default;
+        }
     }
     
+    
+}
+
+.dark .fun-cursor{
+    #color-titles{
+        #color1{
+            @include colorChange($illum-yellow);
+        }
+        #color2{
+            @include colorChange($ultimate-grey);
+        }
+    }
+    a{
+        @include linkChange(black, $light-grey)
+    }
 }
 
 .ab_pg{
@@ -205,6 +317,7 @@ header{
         font-size: 2rem;
     
         color: $serenity;
+        transition: all 0.3s ease;
     }
     
     p{
@@ -213,6 +326,7 @@ header{
         font-weight: normal;
         font-size: 1.5rem;
         a{
+            transition: all 0.3s ease;
             color: $rose_quartz; 
             font-weight: bold;
             &:hover{
@@ -227,12 +341,14 @@ header{
         width: 0.4rem;
         height: 2rem;
         background: $serenity; 
+        transition: all 0.3s ease;
     }
     padding-bottom: 2rem;
     
 }
 
 #bottom-div{
+    transition: all 0.3s ease;
     display: flex; 
     flex-direction: column;
     align-items: center;
@@ -253,7 +369,31 @@ header{
     padding-bottom: 5rem;
 }
 
+.dark .ab_pg{
+    h3{
+        color: $ultimate-grey;
+    }
+    
+    p{
+        a{
+            color: $illum-yellow; 
+            &:hover{
+                color: $light-grey 
+            }
+        }
+    }
+    div{
+        background: $illum-yellow; 
+    }
+    
+}
+
+.dark #bottom-div{
+    color: $ultimate-grey; 
+}
+
 .about_main{
+    
     display: flex; 
     margin: auto; 
     #first-section{
@@ -297,6 +437,7 @@ header{
             }
             
             #big-rect{
+                transition: all 0.3s ease;
                 margin-top: 2rem;
                 margin-left: 2rem;
                 width: 25rem; 
@@ -312,7 +453,7 @@ header{
             width: 27rem;
             height: 3rem;
             background-color: $rose_quartz;
-
+            transition: all 0.3s ease;
             #connect{
                 padding-top: 0.25rem;
                 padding-left: 1rem;
@@ -335,6 +476,7 @@ header{
                 height: 10.5rem;
                 background-color: $rose_quartz;
                 position: absolute;
+                transition: all 0.3s ease;
                 ul{
                     display: flex;
                     list-style: none;
@@ -366,6 +508,7 @@ header{
                 width: 25rem; 
                 height: 10.5rem; 
                 background: $serenity;
+                transition: all 0.3s ease;
             }
 
 
@@ -438,5 +581,56 @@ header{
         align-items: center; 
         justify-content: center;
         //margin-bottom: 5rem;
+    }
+}
+
+.dark #second-section{
+
+    .photo-section{
+        
+        #big-rect{
+            background: $illum-yellow; 
+        } 
+    }
+
+    #rec2{
+        background-color: $ultimate-grey;
+    }
+
+    .links-connect{
+        #rec4{
+            background-color: $ultimate-grey;
+            ul{
+                li{
+                    a{
+                        &:hover{
+                            color:$light-grey 
+                        }
+                    }
+                }
+            }
+        }
+        #background-links{
+            background: $illum-yellow;
+        }
+    }
+}
+
+
+.dark .interests{
+    h3{
+        color: $ultimate-grey;
+
+    }
+    
+    ul{
+        li{
+            a{
+                &:hover{
+                    color:$light-grey; 
+                }
+               
+            }
+        }
     }
 }
